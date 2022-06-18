@@ -1,0 +1,53 @@
+.hover {
+  --s: 0.1em; /* the thickness of the line */
+
+  --c: #1095c1; /* any color */
+
+  color: #0000;
+
+  padding-bottom: var(--s);
+
+  background: linear-gradient(90deg, var(--c) 50%, #000 0)
+      calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+
+  -webkit-background-clip: text, padding-box;
+
+  background-clip: text, padding-box;
+
+  transition: 0.5s;
+}
+
+.hover:hover {
+  --_p: 100%;
+}
+.hover-1 {
+  line-height: 1.2em;
+  color: #0000;
+  text-shadow: 0 0 #000, 0 1.2em #1095c1;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.hover-1:hover {
+  text-shadow: 0 -1.2em #000, 0 0 #1095c1;
+}
+
+/*Page styling starts here*/
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-content: center;
+}
+
+h3 {
+  font-family: system-ui, sans-serif;
+
+  font-size: 3rem;
+
+  margin: 0;
+
+  cursor: pointer;
+
+  padding: 0 0.1em;
+}
